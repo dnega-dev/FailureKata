@@ -34,7 +34,11 @@ class KataGenerationTests(unittest.TestCase):
         value, item = make_case()
         with temporary_directory() as root:
             folder = generate_kata(root, item, value)
-            relative = {str(path.relative_to(folder)) for path in folder.rglob("*") if path.is_file()}
+            relative = {
+                path.relative_to(folder).as_posix()
+                for path in folder.rglob("*")
+                if path.is_file()
+            }
         self.assertEqual(
             relative,
             {
