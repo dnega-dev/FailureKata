@@ -1,5 +1,9 @@
 # FailureKata
 
+[![CI](https://github.com/dnega-dev/FailureKata/actions/workflows/ci.yml/badge.svg)](https://github.com/dnega-dev/FailureKata/actions/workflows/ci.yml)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-3776AB)](https://www.python.org/)
+[![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
+
 FailureKata is a local-first, zero-runtime-dependency Python 3.9+ tool that turns coding-agent transcript failures into executable practice exercises. It normalizes JSONL events, scrubs likely credentials in memory, detects evidence-backed failure patterns, and generates a standalone kata with deterministic `unittest` tests.
 
 > **Privacy boundary:** FailureKata contains no network client and does not upload transcripts. Input, reports, generated fixtures, and the review ledger stay at paths you choose. Redaction is defense in depth, not a guarantee; inspect generated artifacts before sharing them.
